@@ -3,6 +3,11 @@ from filer.fields.image import FilerImageField
 
 class ShinyApp(models.Model):
 
+    class Meta:
+        ordering = ['name']
+        verbose_name = 'Shiny App'
+        verbose_name_plural = 'Shiny Apps'
+
     name = models.CharField(
         help_text='Enter a brief, yet descriptive name for the Shiny app.',
         max_length=64,
