@@ -24,6 +24,10 @@ class ShinyAppAdmin(admin.ModelAdmin):
         fieldset_advanced,
     ]
 
+    list_display = ['name', 'url', 'repo', 'publish']
+    list_filter = ['publish']
+    search_fields = ['name', 'description']
+
     prepopulated_fields = {"slug": ("name",)}
 
 admin.site.register(ShinyApp, ShinyAppAdmin)
