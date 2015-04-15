@@ -1,6 +1,10 @@
 from django.db import models
 from filer.fields.image import FilerImageField
 
+def clickable(url):
+    """This returns a clickable HTML anchor that opens in a new tab"""
+    return "<a href={0} target='_blank'>{0}</a>".format(url)
+
 class ShinyApp(models.Model):
 
     class Meta:
@@ -42,6 +46,18 @@ class ShinyApp(models.Model):
         help_text='Please enter a unique slug for this Shiny app. This should get auto-generated.',
         max_length=64,
     )
+
+    def clickable_url(self):
+        return clickable(self.url)
+
+    clickable_url.allow_tags = True
+    clickable_url.short_description = "Shiny App URL"
+
+    def clickable_repo(self):
+        return clickable(self.repo)
+
+    clickable_repo.allow_tags = True
+    clickable_repo.short_description = "Shiny App Code Repository"
 
     def __str__(self):
         return self.name

@@ -24,7 +24,7 @@ class ShinyAppAdmin(admin.ModelAdmin):
         fieldset_advanced,
     ]
 
-    list_display = ['name', 'url', 'repo', 'publish']
+    list_display = ['name', 'clickable_url', 'clickable_repo', 'publish']
     list_filter = ['publish']
     search_fields = ['name', 'description']
 
