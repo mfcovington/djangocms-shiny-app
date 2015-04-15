@@ -14,7 +14,39 @@ CMS Shiny is A Django app for adding [R Shiny apps](http://shiny.rstudio.com) to
         INSTALLED_APPS = (
             ...
             'cms_shiny',
+            'easy_thumbnails',
+            'filer',
+            'mptt',
         )
+        ```
+
+    - Specify your media settings, if not already specified:
+
+        ```python
+        MEDIA_URL = '/media/'
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+        ```
+
+    - Add `filer` and `easy_thumbnail` settings: 
+
+        ```python
+        # For filer's Django 1.7 compatibility
+        MIGRATION_MODULES = {
+            ...
+            'filer': 'filer.migrations_django',
+        }
+
+        # For easy_thumbnails to support retina displays (recent MacBooks, iOS)
+        THUMBNAIL_HIGH_RESOLUTION = True
+        THUMBNAIL_QUALITY = 95
+        THUMBNAIL_PROCESSORS = (
+            'easy_thumbnails.processors.colorspace',
+            'easy_thumbnails.processors.autocrop',
+            'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+            'easy_thumbnails.processors.filters',
+        )
+        THUMBNAIL_PRESERVE_EXTENSIONS = ('png', 'gif')
+        THUMBNAIL_SUBDIR = 'versions'
         ```
 
 - Include URL configurations for `cms_shiny` in your project's `urls.py` file:
