@@ -27,6 +27,7 @@ class ShinyApp(models.Model):
     )
 
     image = FilerImageField(
+        null=True,
         blank=True,
         help_text='Upload a screenshot of the Shiny app.',
     )
