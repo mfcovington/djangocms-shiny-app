@@ -1,0 +1,12 @@
+<h1>Shiny Apps</h1>
+<ul>
+  {% for shiny_app in published_shiny_apps %}
+    <li>
+      <a href="{% url 'shiny_apps:shiny_detail' shiny_app.slug %}">
+        {{ shiny_app.name }}
+      </a>
+    </li>
+  {% empty %}
+    <li>No Shiny apps yet.</li>
+  {% endfor %}
+</ul>

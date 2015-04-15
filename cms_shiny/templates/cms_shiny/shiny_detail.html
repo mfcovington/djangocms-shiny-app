@@ -1,0 +1,20 @@
+{% if shiny_app.image %}
+  <img src="{{ shiny_app.image.url }}" width="300" alt="{{ shiny_app.name }}">
+{% else %}
+  <img src="http://placehold.it/300x200">
+{% endif %}
+
+<h1>{{ shiny_app.name }}</h1>
+
+<ul>
+  <li>
+    <p>URL: <a href="{{ shiny_app.url }}" target="_blank">{{ shiny_app.url }}</a></p>
+  </li>
+  {% if shiny_app.repo %}
+    <li>
+      <p>Repo: <a href="{{ shiny_app.repo }}" target="_blank">{{ shiny_app.repo }}</a></p>
+    </li>
+  {% endif %}
+</ul>
+
+<p>{{ shiny_app.description }}</p>
