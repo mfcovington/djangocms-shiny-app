@@ -55,3 +55,10 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# django CMS project
+/manage.py
+/media/
+/mysite/
+/project.db
+/static/
