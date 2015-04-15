@@ -31,6 +31,11 @@ class ShinyApp(models.Model):
         help_text='Upload a screenshot of the Shiny app.',
     )
 
+    publish = models.BooleanField(
+        default=True,
+        help_text='Show Shiny app on site?'
+    )
+
     slug = models.SlugField(u'slug',
         default='',
         help_text='Please enter a unique slug for this Shiny app. This should get auto-generated.',

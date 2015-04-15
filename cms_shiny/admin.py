@@ -10,6 +10,7 @@ class ShinyAppAdmin(admin.ModelAdmin):
             'url',
             'repo',
             'image',
+            'publish',
         ]
     })
 
