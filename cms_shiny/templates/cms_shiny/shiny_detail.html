@@ -1,3 +1,12 @@
+<style>
+  .shiny-app {
+    border: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+</style>
+
 {% if shiny_app.image %}
   <img src="{{ shiny_app.image.url }}" width="300" alt="{{ shiny_app.name }}">
 {% else %}
@@ -18,3 +27,4 @@
 </ul>
 
 <p>{{ shiny_app.description }}</p>
+<iframe class="shiny-app" src="{{ shiny_app.url }}" frameborder="0"></iframe>
