@@ -5,25 +5,25 @@
 {% endaddtoblock %}
 
 <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-<div class="item">
+  <div class="item">
 
-  {% include "cms_shiny/_shiny_app_info.html" %}
+    {% include "cms_shiny/_shiny_app_info.html" %}
 
-  <a class="thumbnail" href="{% url 'shiny_apps:shiny_detail' shiny_app.slug %}">
+    <a class="thumbnail" href="{% url 'shiny_apps:shiny_detail' shiny_app.slug %}">
 
-    {% if shiny_app.image %}
-      <img src="{{ shiny_app.image.url }}" alt="{{ shiny_app.name }}">
-    {% else %}
-      <img src="http://placehold.it/300x200">
-    {% endif %}
+      {% if shiny_app.image %}
+        <img src="{{ shiny_app.image.url }}" alt="{{ shiny_app.name }}">
+      {% else %}
+        <img src="http://placehold.it/300x200">
+      {% endif %}
 
-    <div class="caption" >
-      <h4 class="group inner list-group-item-heading text-center">
-        {{ shiny_app.name }}
-      </h4>
-    </div>
+      <div class="caption" >
+        <h4 class="group inner list-group-item-heading text-center">
+          {{ shiny_app.name }}
+        </h4>
+      </div>
 
-  </a>
+    </a>
 
-</div>
+  </div>
 </div>
