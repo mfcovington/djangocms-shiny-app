@@ -43,7 +43,7 @@ install_requires = [
 
 setup(
     name='djangocms-shiny-app',
-    version='0.0.0',
+    version='0.1.0',
     packages=['cms_shiny'],
     include_package_data=True,
     license='BSD License',
