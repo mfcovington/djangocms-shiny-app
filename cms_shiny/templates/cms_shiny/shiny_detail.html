@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load sekizai_tags staticfiles %}
+
+{% block content %}
+
+  {% addtoblock "css" strip %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cms_shiny/app.css' %}">
+  {% endaddtoblock %}
+
+  <iframe class="shiny-app" src="{{ shiny_app.url }}" frameborder="0"></iframe>
+
+  {% include "cms_shiny/_shiny_app_info.html" %}
+
+{% endblock content %}

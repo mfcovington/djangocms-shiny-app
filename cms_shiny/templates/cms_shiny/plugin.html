@@ -1,0 +1,14 @@
+{% load thumbnail sekizai_tags staticfiles %}
+
+{% addtoblock "css" strip %}
+  <link rel="stylesheet" type="text/css" href="{% static 'cms_shiny/app.css' %}">
+{% endaddtoblock %}
+
+<div class="shiny-app-plugin">
+  <div class="row text-center">
+    <div class="item">
+      {% include "cms_shiny/_shiny_app_info.html" with shiny_app=instance.shiny_app %}
+      {% include "cms_shiny/_shiny_list_item.html" with shiny_app=instance.shiny_app %}
+    </div>
+  </div>
+</div>
