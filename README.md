@@ -8,7 +8,7 @@ CMS Shiny is A Django app for adding [R Shiny apps](http://shiny.rstudio.com) to
 
 - Edit the project's `settings.py` file.
 
-    - Add `cms_lab_members` and its dependencies to your `INSTALLED_APPS` setting:
+    - Add `cms_shiny` and its dependencies to your `INSTALLED_APPS` setting:
 
         ```python
         INSTALLED_APPS = (
