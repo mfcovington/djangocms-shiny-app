@@ -7,25 +7,8 @@
 <div class="shiny-app-plugin">
   <div class="row text-center">
     <div class="item">
-
       {% include "cms_shiny/_shiny_app_info.html" with shiny_app=instance.shiny_app %}
-
-      <a class="thumbnail" href="{% url 'shiny_apps:shiny_detail' instance.shiny_app.slug %}">
-
-        {% if instance.shiny_app.image %}
-          <img src="{{ instance.shiny_app.image.url }}" alt="{{ instance.shiny_app.name }}">
-        {% else %}
-          <img src="http://placehold.it/300x200">
-        {% endif %}
-
-        <div class="caption" >
-          <h4 class="group inner list-group-item-heading text-center">
-            {{ instance.shiny_app.name }}
-          </h4>
-        </div>
-
-      </a>
-
+      {% include "cms_shiny/_shiny_list_item.html" with shiny_app=instance.shiny_app %}
     </div>
   </div>
 </div>
