@@ -51,9 +51,17 @@ a.thumbnail:hover {
 .item:hover .shiny-app-info {
   display: block;
 }
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 767px) {
+  .item {
+    max-width: 500px;
+  }
   .item .shiny-app-info {
     display: block;
+  }
+}
+@media screen and (max-width: 479px) {
+  .item {
+    max-width: 90%;
   }
 }
 
