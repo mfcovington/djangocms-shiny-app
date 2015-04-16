@@ -52,7 +52,7 @@ a.thumbnail:hover {
   display: block;
 }
 @media screen and (max-width: 767px) {
-  .item {
+  #shiny-app .item {
     max-width: 500px;
   }
   .item .shiny-app-info {
@@ -60,7 +60,7 @@ a.thumbnail:hover {
   }
 }
 @media screen and (max-width: 479px) {
-  .item {
+  #shiny-app .item {
     max-width: 90%;
   }
 }
