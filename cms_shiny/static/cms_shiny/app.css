@@ -42,3 +42,9 @@ a.thumbnail:hover {
   height: 100%;
   width: 100%;
 }
+.shiny-app-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
