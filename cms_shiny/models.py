@@ -1,5 +1,6 @@
 from django.db import models
 from filer.fields.image import FilerImageField
+from cms.models import CMSPlugin
 
 def clickable(url):
     """This returns a clickable HTML anchor that opens in a new tab"""
@@ -61,3 +62,12 @@ class ShinyApp(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ShinyAppPluginModel (CMSPlugin):
+    shiny_app = models.ForeignKey('cms_shiny.ShinyApp',
+        related_name='plugins'
+    )
+
+    def __str__(self):
+        return self.shiny_app.name
