@@ -1,0 +1,5 @@
+include LICENSE
+include README.md
+recursive-include cms_shiny/static *
+recursive-include cms_shiny/templates *
+recursive-include docs *
