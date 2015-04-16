@@ -1,0 +1,32 @@
+/***********************/
+/* Shiny App List View */
+/***********************/
+
+.thumbnail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 310px;
+}
+.thumbnail .caption {
+  margin-top: auto;
+}
+.thumbnail img {
+  max-width: 100%;
+}
+a.thumbnail:hover {
+  border-color: black;
+  text-decoration: none;
+}

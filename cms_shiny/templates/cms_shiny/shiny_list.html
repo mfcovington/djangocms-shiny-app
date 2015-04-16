@@ -1,12 +1,24 @@
-<h1>Shiny Apps</h1>
-<ul>
-  {% for shiny_app in published_shiny_apps %}
-    <li>
-      <a href="{% url 'shiny_apps:shiny_detail' shiny_app.slug %}">
-        {{ shiny_app.name }}
-      </a>
-    </li>
-  {% empty %}
-    <li>No Shiny apps yet.</li>
-  {% endfor %}
-</ul>
+{% extends "base.html" %}
+{% load sekizai_tags staticfiles thumbnail %}
+
+{% block content %}
+
+  <div class="container">
+    <h1 class="text-center">Shiny Apps</h1>
+    <div class="container-fluid">
+      <div id="shiny-apps" class="row">
+        {% for shiny_app in published_shiny_apps %}
+          {% include "cms_shiny/_shiny_list_item.html" %}
+        {% empty %}
+          <p>Need to add Shiny apps!</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% addtoblock "js" strip %}
+    <script src="{% static 'cms_shiny/jquery.matchHeight-min.js' %}"></script>
+    <script src="{% static 'cms_shiny/app.js' %}"></script>
+  {% endaddtoblock %}
+
+{% endblock content %}

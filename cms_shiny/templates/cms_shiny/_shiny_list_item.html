@@ -1,0 +1,23 @@
+{% load sekizai_tags staticfiles thumbnail %}
+
+{% addtoblock "css" strip %}
+  <link rel="stylesheet" type="text/css" href="{% static 'cms_shiny/app.css' %}">
+{% endaddtoblock %}
+
+<div class="item  col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <a class="thumbnail" href="{% url 'shiny_apps:shiny_detail' shiny_app.slug %}">
+
+    {% if shiny_app.image %}
+      <img src="{{ shiny_app.image.url }}" alt="{{ shiny_app.name }}">
+    {% else %}
+      <img src="http://placehold.it/300x200">
+    {% endif %}
+
+    <div class="caption" >
+      <h4 class="group inner list-group-item-heading text-center">
+        {{ shiny_app.name }}
+      </h4>
+    </div>
+
+  </a>
+</div>
