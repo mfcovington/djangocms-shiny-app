@@ -1,30 +1,12 @@
-<style>
-  .shiny-app {
-    border: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-</style>
+{% extends "base.html" %}
+{% load sekizai_tags staticfiles %}
 
-{% if shiny_app.image %}
-  <img src="{{ shiny_app.image.url }}" width="300" alt="{{ shiny_app.name }}">
-{% else %}
-  <img src="http://placehold.it/300x200">
-{% endif %}
+{% block content %}
 
-<h1>{{ shiny_app.name }}</h1>
+  {% addtoblock "css" strip %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cms_shiny/app.css' %}">
+  {% endaddtoblock %}
 
-<ul>
-  <li>
-    <p>URL: <a href="{{ shiny_app.url }}" target="_blank">{{ shiny_app.url }}</a></p>
-  </li>
-  {% if shiny_app.repo %}
-    <li>
-      <p>Repo: <a href="{{ shiny_app.repo }}" target="_blank">{{ shiny_app.repo }}</a></p>
-    </li>
-  {% endif %}
-</ul>
+  <iframe class="shiny-app" src="{{ shiny_app.url }}" frameborder="0"></iframe>
 
-<p>{{ shiny_app.description }}</p>
-<iframe class="shiny-app" src="{{ shiny_app.url }}" frameborder="0"></iframe>
+{% endblock content %}

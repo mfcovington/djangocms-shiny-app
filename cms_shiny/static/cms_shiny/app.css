@@ -30,3 +30,15 @@ a.thumbnail:hover {
   border-color: black;
   text-decoration: none;
 }
+
+
+/*************************/
+/* Shiny App Detail View */
+/*************************/
+
+.shiny-app {
+  border: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
