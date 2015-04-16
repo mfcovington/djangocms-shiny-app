@@ -4,7 +4,11 @@
   <link rel="stylesheet" type="text/css" href="{% static 'cms_shiny/app.css' %}">
 {% endaddtoblock %}
 
-<div class="item  col-xs-12 col-sm-4 col-md-3 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+<div class="item">
+
+  {% include "cms_shiny/_shiny_app_info.html" %}
+
   <a class="thumbnail" href="{% url 'shiny_apps:shiny_detail' shiny_app.slug %}">
 
     {% if shiny_app.image %}
@@ -20,4 +24,6 @@
     </div>
 
   </a>
+
+</div>
 </div>

@@ -1,3 +1,13 @@
+/*************/
+/* Shiny App */
+/*************/
+
+.shiny-app-info {
+  position: absolute;
+  z-index: 1;
+}
+
+
 /***********************/
 /* Shiny App List View */
 /***********************/
@@ -16,9 +26,6 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 310px;
 }
 .thumbnail .caption {
   margin-top: auto;
@@ -29,6 +36,16 @@
 a.thumbnail:hover {
   border-color: black;
   text-decoration: none;
+}
+.item {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 310px;
+  position: relative;
+}
+.item .shiny-app-info {
+  top: 10px;
+  right: 10px;
 }
 
 
@@ -42,9 +59,7 @@ a.thumbnail:hover {
   height: 100%;
   width: 100%;
 }
-.shiny-app-info {
-  position: absolute;
+iframe + .shiny-app-info {
   top: 20px;
   right: 20px;
-  z-index: 1;
 }
