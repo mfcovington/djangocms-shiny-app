@@ -12,6 +12,9 @@
 /* Shiny App List View */
 /***********************/
 
+.gallery-heading {
+  margin-bottom: 25px;
+}
 .thumbnail {
   display: -webkit-box;
   display: -webkit-flex;
