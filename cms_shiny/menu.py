@@ -20,7 +20,7 @@ class ShinyAppsMenu(CMSAttachMenu):
         for shiny_app in ShinyApp.objects.all():
             node = NavigationNode(
                 shiny_app.name,
-                reverse('shiny_apps:shiny_app_detail', args=(shiny_app.slug,)),
+                reverse('cms_shiny:shiny_detail', args=(shiny_app.slug,)),
                 shiny_app.slug
             )
             nodes.append(node)
