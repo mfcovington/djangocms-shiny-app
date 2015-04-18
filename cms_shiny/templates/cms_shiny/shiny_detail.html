@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load sekizai_tags staticfiles %}
 
+{% block title %}
+  {{ shiny_app.name }}{% if LAB_NAME %} | {{ LAB_NAME }}{% endif %}
+{% endblock title %}
+
 {% block content %}
 
   {% addtoblock "css" strip %}
