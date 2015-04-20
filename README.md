@@ -67,4 +67,4 @@ CMS Shiny is A Django app for adding [R Shiny apps](http://shiny.rstudio.com) to
 
 - Create a CMS page and attach the `Shiny Apps App` under `Advanced Settings` for the page.
 
-*Version 0.1.0*
+*Version 0.1.1*
