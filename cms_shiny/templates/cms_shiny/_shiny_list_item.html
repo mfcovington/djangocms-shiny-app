@@ -4,7 +4,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'cms_shiny/app.css' %}">
 {% endaddtoblock %}
 
-<a class="thumbnail" href="{% url 'shiny_apps:shiny_detail' shiny_app.slug %}">
+<a class="thumbnail" href="{% url 'cms_shiny:shiny_detail' shiny_app.slug %}">
 
   {% if shiny_app.image %}
     <img src="{{ shiny_app.image.url }}" alt="{{ shiny_app.name }}">

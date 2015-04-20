@@ -54,7 +54,7 @@ CMS Shiny is A Django app for adding [R Shiny apps](http://shiny.rstudio.com) to
     ```python
     urlpatterns = patterns('',
         ...
-        url(r'^shiny_apps/', include('cms_shiny.urls', namespace='shiny_apps')),
+        url(r'^shiny_apps/', include('cms_shiny.urls', namespace='cms_shiny')),
         ...
     )
     ```
@@ -65,6 +65,6 @@ CMS Shiny is A Django app for adding [R Shiny apps](http://shiny.rstudio.com) to
 
 - Start the development server (`python manage.py runserver`) and visit http://127.0.0.1:8000/
 
-- Create a CMS page and attach the `Shiny App` under `Advanced Settings` for the page.
+- Create a CMS page and attach the `Shiny Apps App` under `Advanced Settings` for the page.
 
-*Version 0.1.0*
+*Version 0.1.1*

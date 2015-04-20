@@ -9,6 +9,7 @@ from cms_shiny.models import ShinyAppPluginModel
 
 class ShinyAppPlugin(CMSPluginBase):
     model = ShinyAppPluginModel
+    module = "Lab Plugins"
     name = _("Shiny App Plugin")
     render_template = "cms_shiny/plugin.html"
 
