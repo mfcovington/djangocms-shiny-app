@@ -65,6 +65,6 @@ CMS Shiny is A Django app for adding [R Shiny apps](http://shiny.rstudio.com) to
 
 - Start the development server (`python manage.py runserver`) and visit http://127.0.0.1:8000/
 
-- Create a CMS page and attach the `Shiny App` under `Advanced Settings` for the page.
+- Create a CMS page and attach the `Shiny Apps App` under `Advanced Settings` for the page.
 
 *Version 0.1.0*
