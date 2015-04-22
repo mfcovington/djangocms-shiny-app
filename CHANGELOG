@@ -1,0 +1,13 @@
+Revision history for Django app djangocms-shiny-app
+
+0.1.2 2015-04-21
+
+  - Replace line breaks in slide description field with appropriate HTML
+
+0.1.1 2015-04-19
+
+  - Improve django CMS integration and styling
+
+0.1.0 2015-04-16
+
+  - A Django app for adding R Shiny apps to a Django site with django CMS-specific features
