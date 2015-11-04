@@ -49,7 +49,7 @@ Do the following in ``settings.py``:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-- Add ``filer`` and ``easy_thumbnail`` settings: 
+- Add ``easy_thumbnail`` settings: 
 
 .. code-block:: python
 
