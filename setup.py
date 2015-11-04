@@ -23,7 +23,7 @@ install_requires = [
     "dj-database-url==0.3.0",
     "django-classy-tags==0.6.1",
     "django-cms==3.1.0.b1",
-    "django-filer==0.9.9",
+    "django-filer>=0.9.10",
     "django-mptt==0.6.1",
     "django-polymorphic==0.6.1",
     "django-reversion==1.8.5",

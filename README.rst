@@ -53,12 +53,6 @@ Do the following in ``settings.py``:
 
 .. code-block:: python
 
-    # For filer's Django 1.7 compatibility
-    MIGRATION_MODULES = {
-        ...
-        'filer': 'filer.migrations_django',
-    }
-
     # For easy_thumbnails to support retina displays (recent MacBooks, iOS)
     THUMBNAIL_HIGH_RESOLUTION = True
     THUMBNAIL_QUALITY = 95
