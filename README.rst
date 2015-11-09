@@ -41,14 +41,6 @@ Do the following in ``settings.py``:
     )
 
 
-- Specify your media settings, if necessary:
-
-.. code-block:: python
-
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
 - Add ``easy_thumbnail`` settings: 
 
 .. code-block:: python
