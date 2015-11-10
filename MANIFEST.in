@@ -3,4 +3,3 @@ include LICENSE
 include README.rst
 recursive-include cms_shiny/static *
 recursive-include cms_shiny/templates *
-recursive-include docs *
