@@ -54,6 +54,7 @@ setup(
     version='0.1.2',
     packages=['cms_shiny'],
     include_package_data=True,
+    keywords='bioinformatics visualization cran r rstudio shiny shinyapp',
     license='BSD License',
     description='A Django app for adding R Shiny apps to a Django site with django CMS-specific features',
     long_description=(read('README.rst') + '\n\n' +
@@ -66,6 +67,7 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Django :: 1.7',
+        'Framework :: Django :: 1.8',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: BSD License',
@@ -78,6 +80,8 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+        'Topic :: Scientific/Engineering :: Bio-Informatics',
+        'Topic :: Scientific/Engineering :: Visualization',
     ],
     install_requires=install_requires,
 )
