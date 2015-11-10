@@ -33,7 +33,7 @@ Do the following in ``settings.py``:
 .. code-block:: python
 
     INSTALLED_APPS = (
-        ...
+        # ...
         'cms_shiny',
         'easy_thumbnails',
         'filer',
@@ -60,13 +60,26 @@ Do the following in ``settings.py``:
 
 To access ``cms_shiny`` pages without using a django CMS AppHook, include URL configurations for ``cms_shiny`` in your project's ``urls.py`` file:
 
-.. code-block:: python
+- For **Django 1.7**:
 
-    urlpatterns = patterns('',
-        ...
-        url(r'^shiny_apps/', include('cms_shiny.urls', namespace='cms_shiny')),
-        ...
-    )
+  .. code-block:: python
+
+      urlpatterns = patterns('',
+          # ...
+          url(r'^shiny_apps/', include('cms_shiny.urls', namespace='cms_shiny')),
+          # ...
+      )
+
+
+- For **Django 1.8**:
+
+  .. code-block:: python
+
+      urlpatterns = [
+          # ...
+          url(r'^shiny_apps/', include('cms_shiny.urls', namespace='cms_shiny')),
+          # ...
+      ]
 
 
 Migrations
