@@ -1,6 +1,5 @@
-include CHANGELOG
+include CHANGELOG.rst
 include LICENSE
-include README.md
+include README.rst
 recursive-include cms_shiny/static *
 recursive-include cms_shiny/templates *
-recursive-include docs *

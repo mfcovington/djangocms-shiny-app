@@ -16,6 +16,7 @@ class ShinyApp(models.Model):
     name = models.CharField(
         help_text='Enter a brief, yet descriptive name for the Shiny app.',
         max_length=64,
+        unique=True,
     )
 
     description = models.TextField(
@@ -43,9 +44,9 @@ class ShinyApp(models.Model):
     )
 
     slug = models.SlugField(u'slug',
-        default='',
         help_text='Please enter a unique slug for this Shiny app. This should get auto-generated.',
         max_length=64,
+        unique=True,
     )
 
     def clickable_url(self):
