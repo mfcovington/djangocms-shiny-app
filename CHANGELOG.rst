@@ -1,6 +1,14 @@
 Revision History
 ================
 
+0.1.3 2015-12-07
+
+- Fix thumbnail image elongation in Chrome on screens >= 1200px wide
+- Require that ShinyApp name and slug are unique
+- Update README with more complete and accurate instructions
+- Prepare for distribution via PyPI
+
+
 0.1.2 2015-04-21
 
 - Replace line breaks in slide description field with appropriate HTML
