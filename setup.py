@@ -23,7 +23,7 @@ install_requires = [
 
 setup(
     name='djangocms-shiny-app',
-    version='0.1.2',
+    version='0.1.3',
     packages=['cms_shiny'],
     include_package_data=True,
     keywords='bioinformatics visualization cran r rstudio shiny shinyapp',
