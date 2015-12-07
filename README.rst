@@ -16,6 +16,7 @@ Installation
 **PyPI**
 
 .. code-block:: sh
+
     pip install djangocms-shiny-app
 
 
