@@ -22,7 +22,7 @@ Installation
 
 .. code-block:: sh
 
-    pip install https://github.com/mfcovington/djangocms-shiny-app/releases/download/0.1.2/djangocms-shiny-app-0.1.2.tar.gz
+    pip install https://github.com/mfcovington/djangocms-shiny-app/releases/download/0.1.3/djangocms-shiny-app-0.1.3.tar.gz
 
 
 Configuration
@@ -131,4 +131,4 @@ Usage
   - Insert the ``Shiny App Plugin`` into a placeholder field.
 
 
-*Version 0.1.2*
+*Version 0.1.3*
