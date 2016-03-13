@@ -5,19 +5,19 @@
 {% endaddtoblock %}
 
 <div class="thumbnail">
-  <a href="{% url 'cms_shiny:shiny_detail' shiny_app.slug %}">
 
+  <a href="{% url 'cms_shiny:shiny_detail' shiny_app.slug %}">
     {% if shiny_app.image %}
       <img src="{{ shiny_app.image.url }}" alt="{{ shiny_app.name }}">
     {% else %}
       <img src="http://placehold.it/300x200">
     {% endif %}
-
-    <div class="caption" >
-      <h4 class="group inner list-group-item-heading text-center">
-        {{ shiny_app.name }}
-      </h4>
-    </div>
-
   </a>
+
+  <div class="caption" >
+    <h4 class="group inner list-group-item-heading text-center">
+      {{ shiny_app.name }}
+    </h4>
+  </div>
+
 </div>
